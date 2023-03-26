@@ -1,0 +1,138 @@
+.navbar-container {
+    margin-block: 30px;
+    margin-inline:  var( --margin-inline);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    align-items: center;
+    padding: 6px;
+}
+
+.navbar-logo img {
+    position: absolute;
+    top: -20px;
+    width: 120px;
+    height: 120px;
+}
+
+.navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+}
+.hover-links{
+    transition: all 0.5s;
+    display: inline-block;
+}
+.hover-links:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+a {
+    text-decoration: none;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 6px;
+    color: var(--subtext-color);
+}
+
+.navbar-menu{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.navbar-menu-links{
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background:linear-gradient(144.39deg, rgba(255, 255, 255,0.7) -278.56%, rgba(109, 109, 109,0.7) -78.47%, rgba(17, 16, 29,0.7) 91.61%);
+    backdrop-filter: blur(10px);
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+
+
+@media screen and (max-width: 850px) {
+    :root{
+        --margin-inline : 40px ;
+    }
+    .navbar-menu{
+        display: block;
+        position: relative;
+        
+    }
+    .navbar-links{
+        display: none;
+    }
+    .navbar-menu-links{
+        display: block;
+        padding: 0.2rem;
+    }
+    .navbar-menu-links ul li{
+       padding: 0.6rem;
+       margin-block:10px;
+       list-style: none;
+    }
+    
+   
+}
+@media screen and (max-width:850px) {
+
+    .navbar-container {
+        margin-block: 15px;
+        margin-inline:  20px;
+    }
+}
+@media screen and (max-width:446px) {
+    :root{
+        --margin-inline:10px;
+    }
+    .navbar-container {
+        margin-block: 15px;
+        margin-inline:  var( --margin-inline);
+    }
+    .navbar-menu-links{
+    top: 60px;
+    width:90vw ;
+}
+}

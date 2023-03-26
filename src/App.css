@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --font-family: 'Poppins', 'Roboto', sans-serif;
+  --background-color: rgb(0, 4, 15);
+  --margin-inline: 135px;
+  --gradient-color: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+  --background-gradient-color: linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+  --logo-color: #424147;
+  --subtext-color: #FFFFFFB2;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--background-color);
+
+
+  font-family: var(--font-family);
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1770px;
+  margin-inline: auto;
+}
+
+.primary-button {
+  background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+  height: 64px;
+  width: 170px;
+  border-radius: 10px;
+  color: #00040E;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.primary-button:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+
+
+@media screen and (max-width:1380px) {
+  :root {
+    --margin-inline: 100px;
   }
 }
+
+@media screen and (max-width:1180px) {
+  :root {
+    --margin-inline: 80px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  :root {
+    --margin-inline: 60px;
+  }
+}
+
+@media screen and (max-width:969px) {
+  :root {
+    --margin-inline: 30px;
+  }
+}
+
+@media screen and (max-width:850px) {
+  :root {
+    --margin-inline: 20px;
+  }
+}
+
+
+/* H1 and P media query */
+
+@media screen and (max-width:1269px) {
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+
+
+
+@media screen and (max-width:1017px) {
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width:850px) {
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 64px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  h2 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+  }
+}
+
+
